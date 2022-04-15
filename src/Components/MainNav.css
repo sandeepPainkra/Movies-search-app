@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+}
+.mainNav {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  z-index: 100;
+}
+
+.MuiBottomNavigationAction-wrapper {
+  color: rgb(230, 229, 229) !important;
+}
+.MuiBottomNavigationAction-wrapper:hover {
+  color: rgb(21, 57, 107) !important;
+}
+.MuiBottomNavigationAction-root.Mui-selected {
+  color: hsl(231, 33%, 54%) !important;
+  padding-top: 6px;
+}
+@media only screen and (max-width: 1050px) {
+  .mainNav {
+    width: 100% !important;
+    margin-left: 3rem;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .mainNav {
+    width: 90% !important;
+  }
+}
