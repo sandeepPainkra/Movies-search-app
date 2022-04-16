@@ -1,4 +1,22 @@
 .app {
   background-color: #3a445c;
   min-height: 100vh;
+  padding-bottom: 6rem;
+}
+.pageTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+/* pagination style */
+.pagination {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  place-items: center;
 }

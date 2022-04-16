@@ -1,0 +1,47 @@
+.singleContent {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 5px;
+  margin: 1rem 0.8rem;
+  text-align: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  background-color: #495060;
+  transition: all 500ms;
+  height: 370px;
+}
+.poster {
+  border-radius: 10px;
+}
+.singleContent:hover {
+  background-color: #fff;
+}
+.title {
+  color: grey;
+  margin-top: 0.5rem;
+}
+.subTitle {
+  display: flex;
+  align-items: center;
+  color: gray;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .singleContent {
+    width: 46%;
+  }
+}
+
+/* trending page style */
+
+.trendingContent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}

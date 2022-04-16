@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SingleContent from "../Components/SingleContent.js";
+import CustemPagintion from "../pagination/CustemPagintion.js";
 const Trending = () => {
   const [trendingData, setTrending] = useState([]);
+  const [page, setPage] = useState(1);
   const fetchingData = async () => {
     const data = await axios.get(
-      "https://api.themoviedb.org/3/trending/all/week?api_key=f7147f637de57eeea1e3106c3d221938"
+      `https://api.themoviedb.org/3/trending/all/week?api_key=f7147f637de57eeea1e3106c3d221938&page=${page}`
     );
     setTrending(data.data.results);
   };
-  fetchingData();
+  useEffect(() => {
+    fetchingData();
+  }, [page]);
+
   return (
     <div className="trending">
       <h1 className="pageTitle">Trending</h1>
@@ -30,6 +35,8 @@ const Trending = () => {
             );
           })}
       </div>
+
+      <CustemPagintion setPage={setPage} page={page} />
     </div>
   );
 };
